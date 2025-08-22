@@ -13,8 +13,8 @@ def login():
         password = request.form.get("password")
 
         # Save credentials to logins.txt
-        with open("logins.txt", "a") as f:
-            f.write(f"Username: {username}, Password: {password}\n")
+        print(f"[LOGIN ATTEMPT] Username: {username}, Password: {password}")
+
 
         return "✅ Login successful (credentials saved)!"
 
@@ -23,3 +23,4 @@ def login():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
